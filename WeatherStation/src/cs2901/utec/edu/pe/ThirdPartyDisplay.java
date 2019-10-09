@@ -1,12 +1,12 @@
 package cs2901.utec.edu.pe;
 
-public class StatisticsDisplay implements Observer, DisplayElement {
+public class ThirdPartyDisplay implements Observer, DisplayElement {
     private WeatherData weatherData;
     private float temp;
     private float humidity;
     private float pressure;
 
-    public StatisticsDisplay(WeatherData _weatherData) {
+    public ThirdPartyDisplay(WeatherData _weatherData) {
         weatherData = _weatherData;
         weatherData.registerObserver(this);
     }
@@ -19,10 +19,10 @@ public class StatisticsDisplay implements Observer, DisplayElement {
     }
 
     @Override
-    public void display(){
-        System.out.println("El Promedio es " + Math.random()*10);
-        System.out.println("El minimo es " + Math.random()*10);
-        System.out.println("El maximo es " + Math.random()*10);
+    public void display() {
+        System.out.println("La temperatura es " + temp);
+        System.out.println("La presion es " + pressure);
+        System.out.println("La humedad es " + humidity);
 
     }
 }
