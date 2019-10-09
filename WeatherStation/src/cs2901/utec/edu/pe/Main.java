@@ -8,5 +8,9 @@ public class Main {
         StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
         ThirdPartyDisplay thirdPartyDisplay = new ThirdPartyDisplay(weatherData);
+
+        weatherData.notifyObservers();
+
+        currentCoditions.display();
     }
 }
